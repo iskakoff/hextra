@@ -1,0 +1,140 @@
+
+:root {
+  --primary-hue: 132deg;
+  --primary-saturation: 50%;
+  --navbar-height: 4rem;
+  --menu-height: 3.75rem;
+  --button-width: 210px;
+}
+
+.dark {
+  --primary-hue: 102deg;
+  --primary-saturation: 100%;
+}
+
+@media (max-width: 767px) {
+  .sponsor-container {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    z-index: 15;
+    width: 100%;
+    overscroll-behavior: contain;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-top: calc(var(--navbar-height));
+  }
+  :is(html[class~="dark"] .sponsor-container) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+  }
+  .sponsor-container {
+    transition: transform 0.8s cubic-bezier(0.52, 0.16, 0.04, 1);
+    will-change: transform, opacity;
+    contain: layout style;
+    backface-visibility: hidden;
+  }
+}
+
+.btn {
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn-primary {
+    background-color: hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity)) !important;
+    border: hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity))px solid !important;
+    --tw-text-opacity: 1;
+    color: rgb(247 224 239 / var(--tw-text-opacity));
+    font-weight: 600;
+    width: var(--button-width);
+    &:hover,
+    &:active,
+    &.active,
+    &.focus {
+        background: var(--btn-primary-bg);
+        border-color: var(--btn-primary-border) !important;
+        --tw-text-opacity: 1;
+        color: rgb(17 24 39 / var(--tw-text-opacity));
+    }
+    :is(html[class~="dark"])
+    &:hover,
+    &:active,
+    &.active,
+    &.focus {
+        background: var(--btn-primary-bg);
+        border-color: var(--btn-primary-border) !important;
+        background-color: hsl(var(--primary-hue) var(--primary-saturation) 55% / var(--tw-bg-opacity)) !important;
+        --tw-text-opacity: 1;
+        color: rgb(17 24 39 / var(--tw-text-opacity));
+    }
+}
+
+:is(html[class~="dark"]) .btn-primary {
+    color: rgb(37 42 47 / var(--tw-text-opacity));
+}
+
+.btn-outlined-primary {
+    background-color: var(--btn-primary-bg) !important;
+    border: 2px solid hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity)) !important;
+    border-color: hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity));
+    color: hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity)) !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: var(--button-width);
+    &:hover,
+    &:active,
+    &.active,
+    &.focus {
+        background-color: hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity)) !important;
+        border-color: hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity));
+        --tw-text-opacity: 1;
+        color: rgb(247 224 239 / var(--tw-text-opacity)) !important;
+    }
+}
+
+:is(html[class~="dark"]) .btn-outlined-primary {
+    color: hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity)) !important;
+    &:hover,
+    &:active,
+    &.active,
+    &.focus {
+        color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
+        background-color: hsl(var(--primary-hue) var(--primary-saturation) 55% / var(--tw-bg-opacity)) !important;
+    }
+}
+
+
+.btn-outlined-error {
+    background-color: var(--btn-primary-bg) !important;
+    border: 2px solid rgb(255 1 1 / var(--tw-text-opacity)) !important;
+    border-color:  rgb(255 1 1 / var(--tw-text-opacity));
+    color: var(--btn-primary-color) !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: var(--button-width);
+
+    &:hover,
+    &:active,
+    &.active,
+    &.focus {
+        background-color: rgb(255 2 3 / var(--tw-text-opacity))  !important;
+        border-color: rgb(255 2 3 / var(--tw-text-opacity)) ; //hsl(var(--primary-hue) var(--primary-saturation) 45% / var(--tw-bg-opacity));
+        --tw-text-opacity: 1;
+        color: rgb(255 2 3 / var(--tw-text-opacity));
+    }
+}
+
+.align-middle{vertical-align:middle!important}
+
+.focus\:ring-primary-100:focus {
+  //--tw-ring-opacity: 90;
+  //--tw-ring-color: rgb(255 1 1 / var(--tw-text-opacity));
+}
+
+:is(html[class~="dark"] .dark\:focus\:ring-primary-100:focus) {
+  //--tw-ring-opacity: 90;
+  //--tw-ring-color: rgb(255 1 1 / var(--tw-text-opacity));
+}
